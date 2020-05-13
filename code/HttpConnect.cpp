@@ -318,7 +318,7 @@ void HttpConnect::AddClientFailResponse(int code,string msg)
 	output+="Server: MyWebServer\r\n";
 	output+="Content-type: text/html\r\n";
 	output+="Connection: close\r\n";
-	output+="Content-length "+to_string(body.size())+"\r\n\r\n";
+	output+="Content-length: "+to_string(body.size())+"\r\n\r\n";
 
 	output+=body;
 	writeBuffers.push(output);
